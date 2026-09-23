@@ -357,3 +357,24 @@ GitHub Repository:
 https://github.com/Baitumetse-Lekubu/ctric-acids-entertainment
 
 ---
+
+##  Recent Updates & Features (Part 2)
+
+This section highlights the latest improvements, styling upgrades, and interactive features added to the **C'Tric Acids Entertainment** web application:
+
+* **Header & Branding Restyle:**
+  * Updated the main header background to a clean, modern white (`--base-neutral`) to perfectly accommodate the transparent logo.
+  * Adjusted the main company name typography color to a sleek charcoal grey (`--dark-neutral`) for optimal contrast and readability.
+* **Interactive Event Gallery & Lightbox Modal:**
+  * Implemented a responsive CSS Grid layout for event photographs across past company showcases.
+  * Added a  **lightbox modal zoom feature** allowing users to click any thumbnail and view a high-resolution, centered pop-up preview without leaving the page.
+  * Designed smooth hover animations and transitions for an enhanced user experience (UX).
+* **Codebase Structure & Repository Management:**
+  * Organized styles cleanly into modular CSS stylesheets linked across all HTML templates (`index.html`, `gallery.html`, `services.html`, etc.).
+  * Maintained version control best practices via Git and GitHub commits.
+
+### Built With
+* **HTML5** – Semantic document structuring
+* **VIsual Studio Code** – for coding all HTML files and the CSS Style Sheet
+* **CSS3** – Custom properties (variables), Flexbox, CSS Grid, and responsive design
+* **JavaScript (Vanilla)** – Interactive gallery lightbox functionality
