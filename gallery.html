@@ -32,23 +32,59 @@
         <section class="gallery-section">
             <h2>Event Gallery</h2>
             <div class="gallery-grid">
-                <img src="images/gallery/thmc-event-1.jpg" alt="THMC Event 1">
-                <img src="images/gallery/thmc-event-2.jpg" alt="THMC Event 2">
-                <img src="images/gallery/thmc-event-3.jpg" alt="THMC Event 3">
-                <img src="images/gallery/thmc-event-4.jpg" alt="THMC Event 4">
-                <img src="images/gallery/thmc-event-5.jpg" alt="THMC Event 5">
-                <img src="images/gallery/thmc-event-6.jpg" alt="THMC Event 6">
-                <img src="images/gallery/thmc-event-7.jpg" alt="THMC Event 7">
-                <img src="images/gallery/Tke-events-1.jpg" alt="TKE Events 1">
-                <img src="images/gallery/Tke-events-2.jpg" alt="TKE Events 2">
-                <img src="images/gallery/Tke-events-3.jpg" alt="TKE Events 3">
-                <img src="images/gallery/Tke-events-4.jpg" alt="TKE Events 4">
-                <img src="images/gallery/Tke-events-5.jpg" alt="TKE Events 5">
-                <img src="images/gallery/Tke-events-6.jpg" alt="TKE Events 6">
-                <img src="images/gallery/Tke-events-7.jpg" alt="TKE Events 7">
-                <img src="images/gallery/Tke-events-8.jpg" alt="TKE Events 8">
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="images/gallery/thmc-event-1.jpg" alt="THMC Event 1">
+                </div>
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="images/gallery/thmc-event-2.jpg" alt="THMC Event 2">
+                </div>
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="images/gallery/thmc-event-3.jpg" alt="THMC Event 3">
+                </div>
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="images/gallery/thmc-event-4.jpg" alt="THMC Event 4">
+                </div>
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="images/gallery/thmc-event-5.jpg" alt="THMC Event 5">
+                </div>
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="images/gallery/thmc-event-6.jpg" alt="THMC Event 6">
+                </div>
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="images/gallery/thmc-event-7.jpg" alt="THMC Event 7">
+                </div>
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="images/gallery/Tke-events-1.jpg" alt="TKE Events 1">
+                </div>
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="images/gallery/Tke-events-2.jpg" alt="TKE Events 2">
+                </div>
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="images/gallery/Tke-events-3.jpg" alt="TKE Events 3">
+                </div>
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="images/gallery/Tke-events-4.jpg" alt="TKE Events 4">
+                </div>
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="images/gallery/Tke-events-5.jpg" alt="TKE Events 5">
+                </div>
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="images/gallery/Tke-events-6.jpg" alt="TKE Events 6">
+                </div>
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="images/gallery/Tke-events-7.jpg" alt="TKE Events 7">
+                </div>
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="images/gallery/Tke-events-8.jpg" alt="TKE Events 8">
+                </div>
             </div>
         </section>
+
+        <!-- Lightbox Modal Overlay -->
+        <div id="lightbox-modal" class="lightbox" onclick="closeLightbox()">
+            <span class="lightbox-close">&times;</span>
+            <img id="lightbox-img" src="" alt="Zoomed Event Image">
+        </div>
     </main>
 
     <footer>
@@ -66,6 +102,22 @@
         <p>&copy; 2026 C'Tric Acids Entertainment. All Rights Reserved.</p>
         <p>Email: info@ctricacids.co.za</p>
     </footer>
+
+    <!-- Lightbox Script -->
+    <script>
+        function openLightbox(element) {
+            const modal = document.getElementById('lightbox-modal');
+            const modalImg = document.getElementById('lightbox-img');
+            const img = element.querySelector('img');
+            
+            modal.style.display = 'flex';
+            modalImg.src = img.src;
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox-modal').style.display = 'none';
+        }
+    </script>
 
 </body>
 </html>
