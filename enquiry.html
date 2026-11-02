@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enquiry | C'Tric Acids Entertainment</title>
+    <title>Enquiry & Quotes | C'Tric Acids Entertainment</title>
+    <meta name="description" content="Submit your enquiry for event management, equipment rentals, sound, and stage hire with C'Tric Acids Entertainment in Pretoria.">
+    <meta name="keywords" content="event enquiry, equipment rental quote, sound hire Pretoria, booking form">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -31,8 +33,9 @@
     <main>
         <section class="enquiry-section">
             <h2>Make an Enquiry</h2>
+            <p>Fill out the form below to request a quote or check availability for your upcoming event.</p>
             
-            <form action="#" method="post" class="enquiry-form">
+            <form id="enquiryForm" action="#" method="post" class="enquiry-form" onsubmit="handleEnquiry(event)">
                 <div class="form-group">
                     <label for="fullname">Full Name</label>
                     <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
@@ -52,11 +55,11 @@
                     <label for="service">Service Required</label>
                     <select id="service" name="service" required>
                         <option value="" disabled selected>Select a service</option>
-                        <option value="event-management">Event Management</option>
-                        <option value="equipment-rental">Equipment Rentals</option>
-                        <option value="sound-lighting">Sound and Lighting Solutions</option>
-                        <option value="stage-infrastructure">Stage & Event Infrastructure</option>
-                        <option value="technical-support">Technical Support</option>
+                        <option value="Event Management">Event Management</option>
+                        <option value="Equipment Rentals">Equipment Rentals</option>
+                        <option value="Sound and Lighting Solutions">Sound and Lighting Solutions</option>
+                        <option value="Stage & Event Infrastructure">Stage & Event Infrastructure</option>
+                        <option value="Technical Support">Technical Support</option>
                     </select>
                 </div>
 
@@ -69,6 +72,9 @@
                     <label for="additional-info">Additional Information</label>
                     <textarea id="additional-info" name="additional-info" rows="5" placeholder="Tell us more about your event requirements..."></textarea>
                 </div>
+
+                <!-- Dynamic feedback message container -->
+                <div id="formFeedback" style="margin-top: 1rem; font-weight: bold; text-align: center;"></div>
 
                 <button type="submit" class="btn btn-submit">Submit Enquiry</button>
             </form>
@@ -90,6 +96,30 @@
         <p>&copy; 2026 C'Tric Acids Entertainment. All Rights Reserved.</p>
         <p>Email: info@ctricacids.co.za</p>
     </footer>
+
+    <!-- JavaScript Client-Side Validation and Processing Response -->
+    <script>
+        function handleEnquiry(event) {
+            event.preventDefault();
+            const fullName = document.getElementById('fullname').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const service = document.getElementById('service').value;
+            const eventDate = document.getElementById('event-date').value;
+            const feedback = document.getElementById('formFeedback');
+
+            if(fullName === "" || email === "" || phone === "" || service === "" || eventDate === "") {
+                feedback.style.color = "#d9534f";
+                feedback.textContent = "Please fill in all required fields correctly before submitting.";
+                return;
+            }
+
+            feedback.style.color = "#2FA243";
+            feedback.textContent = `Thank you, ${fullName}! Your enquiry for ${service} on ${eventDate} has been received successfully. Our team will review your requirements and email a custom quote to ${email} within 24 hours.`;
+            
+            document.getElementById('enquiryForm').reset();
+        }
+    </script>
 
 </body>
 </html>

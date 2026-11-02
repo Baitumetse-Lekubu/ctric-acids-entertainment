@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | C'Tric Acids Entertainment</title>
+    <meta name="description" content="Get in touch with C'Tric Acids Entertainment in Pretoria and Temba. Contact us for event bookings, infrastructure rentals, and general enquiries.">
+    <meta name="keywords" content="contact C'tric Acids, event bookings Pretoria, Pretoria Central office, Suurman Temba location">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -31,6 +33,7 @@
     <main>
         <section class="contact-section">
             <h2>Contact Us</h2>
+            <p>Reach out to our team for general queries, event coordination, or business support.</p>
 
             <div class="contact-grid">
                 <article class="contact-card">
@@ -41,9 +44,9 @@
                 </article>
 
                 <article class="contact-card">
-                    <h3>Locations</h3>
+                    <h3>Our Locations</h3>
                     <div class="location-block">
-                        <h4>Location 1:</h4>
+                        <h4>Location 1: Pretoria Central</h4>
                         <address>
                             173 Pretorius Street,<br>
                             Pretoria Central,<br>
@@ -52,7 +55,7 @@
                         </address>
                     </div>
                     <div class="location-block">
-                        <h4>Location 2:</h4>
+                        <h4>Location 2: Temba</h4>
                         <address>
                             223c Section 3,<br>
                             Suurman,<br>
@@ -61,6 +64,41 @@
                         </address>
                     </div>
                 </article>
+            </div>
+
+            <!-- General Contact Form (Compiles message data into an email) -->
+            <div class="enquiry-section" style="margin-top: 2rem; max-width: 100%;">
+                <h3>Send Us a Message</h3>
+                <form action="mailto:info@ctricacids.co.za" method="post" enctype="text/plain" class="enquiry-form">
+                    <div class="form-group">
+                        <label for="contact-name">Full Name</label>
+                        <input type="text" id="contact-name" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Email Address</label>
+                        <input type="email" id="contact-email" name="email" placeholder="Enter your email address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-subject">Message Type</label>
+                        <select id="contact-subject" name="subject" required>
+                            <option value="" disabled selected>Select message type</option>
+                            <option value="General Query">General Query</option>
+                            <option value="Partnership / Artist">Partnership / Artist</option>
+                            <option value="Feedback">Feedback</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-msg">Message</label>
+                        <textarea id="contact-msg" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-submit">Send Email Message</button>
+                </form>
+            </div>
+
+            <!-- Interactive Map Embed -->
+            <div class="map-container" style="margin-top: 2rem;">
+                <h3>Location Map (Pretoria Central Office)</h3>
+                <iframe title="C'Tric Acids Pretoria Office Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.859676646875!2d28.188085!3d-25.7479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ebf7c043e8a0001%3A0x123456789abcdef!2s173%20Pretorius%20St%2C%20Pretoria%20Central%2C%20Pretoria%2C%200002!5e0!3m2!1sen!2sza!4v1650000000000!5m2!1sen!2sza" width="100%" height="350" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </section>
     </main>
